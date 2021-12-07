@@ -30,4 +30,7 @@ public class CoffeePlace {
 
     @Column(name = "about_place")
     private String aboutPlace;
+
+    @Column(name = "deleted")
+    private boolean deleted;
 }

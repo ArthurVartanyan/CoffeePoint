@@ -21,4 +21,7 @@ public class CoffeePlaceReview {
 
     @Column(name = "review_text")
     private String reviewText;
+
+    @Column(name = "deleted")
+    private boolean deleted;
 }
