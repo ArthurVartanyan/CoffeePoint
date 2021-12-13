@@ -1,4 +1,4 @@
-package com.coffee.point.dto;
+package com.coffee.point.dto.place;
 
 import lombok.Getter;
 import lombok.Setter;

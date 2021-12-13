@@ -1,7 +1,7 @@
 package com.coffee.point.service;
 
-import com.coffee.point.dto.CoffeePlaceDTO;
-import com.coffee.point.dto.CreateCoffeePlaceDTO;
+import com.coffee.point.dto.place.CoffeePlaceDTO;
+import com.coffee.point.dto.place.CreateCoffeePlaceDTO;
 import com.coffee.point.mapper.CoffeePlaceMapper;
 import com.coffee.point.model.CoffeePlace;
 import com.coffee.point.repository.CoffeePlaceRepository;
