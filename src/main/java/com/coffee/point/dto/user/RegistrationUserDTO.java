@@ -20,7 +20,5 @@ public class RegistrationUserDTO {
 
     private String checkPassword;
 
-    private String mail;
-
     private UserRole userRole;
 }
