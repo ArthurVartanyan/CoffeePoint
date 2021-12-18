@@ -53,9 +53,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 
     /**
-     * Метод конфигураций.
-     * Вместо аннотаций над методами и классами для доступа по ролям,
-     * было решено использовать antMatchers с ограничениями по ссылкам (по ролям).
+     * Method of configurations.
+     * Instead of annotations over methods and classes for access by role,
+     * it was decided to use antMatchers with restrictions on links (by role).
      */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -65,7 +65,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
+                .antMatchers("/META-INF/**").permitAll()
                 .antMatchers("/api/registration", "/api/authentication")
+                .permitAll()
+                .antMatchers("/v2/api-docs",
+                        "/configuration/ui",
+                        "/swagger-resources/**",
+                        "/configuration/security",
+                        "/swagger-ui.html",
+                        "/webjars/**")
                 .permitAll()
                 .anyRequest()
                 .authenticated().and()
